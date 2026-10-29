@@ -1,0 +1,35 @@
+# data and outputs - never in Git
+data/
+backup/
+outputs/
+api_usage/
+
+# frozen inputs: ignore the data files, track only the README
+frozen_inputs/*
+!frozen_inputs/README.md
+
+# output backups: ignore the data files, track only the README
+output_backup/*
+!output_backup/README.md
+
+# presentation images: ignore the files (large maps), track only the README
+images/*
+!images/README.md
+!images/*.py
+# pilot deck working copies of images/ PNGs and the user's raw stock
+docs/presentation/pilot/assets/
+
+# newer (non-legacy) inputs: not tracked at all, README included
+inputs/
+
+# diagnostics: data ignored; scripts and diagnostic_img/ tracked
+diagnostics/diagnostic_data/
+
+# editor and Python clutter
+.idea/
+.venv/
+__pycache__/
+*.pyc
+
+# secrets
+.env
